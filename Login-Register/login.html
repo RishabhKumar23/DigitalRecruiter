@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>LogIn</title>
+</head>
+
+<body>
+  <section>
+    <div class="main-div">
+      <div class="image">
+      </div>
+      <form action="/search" method="get">
+        <div class="login">
+          <div style="width: 360px;">
+            <h1>Login</h1>
+            <p style="color: #8F8686;
+                        font-family: Inter;
+                        font-size: 24px;
+                        font-style: italic;
+                        font-weight: 500;
+                        line-height: normal;">Please enter your credentials</p>
+          </div>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <div style="width: 360px;">
+            <input type="checkbox" id="remember" name="remember" value="remember" required>
+            <label style="color: #C6B1B1;
+              font-family: Inter;
+              font-size: 18px;
+              font-style: italic;
+              font-weight: 300;
+              line-height: normal;" for="remember">Keep me logged in</label><br>
+          </div>
+          <button type="submit">LogIn</button>
+          <p style="color: #C6B1B1;
+          font-family: Inter;
+          font-size: 15px;
+          font-style: italic;
+          font-weight: 300;
+          line-height: normal;
+          width: 360px;">Don't have an account? <a href="/register">Sign Up</a></p>
+
+          <div style="display: flex; justify-content: center; align-items: center; color:#C6B1B1 ;">
+            <hr style="width: 50px; height: 0px; margin-right: 5px;color: #C6B1B1;">
+            Or Continue With
+            <hr style="width: 50px; height: 0px;margin-left: 5px;color: #C6B1B1;">
+          </div>
+          <div style="cursor: pointer;">
+            <img src="/google.svg" alt="" width="60">
+            <img src="/twitter.svg" alt="" width="60">
+            <img src="/apple.svg" alt="" width="60">
+            <img src="/facebook.svg" alt="" width="60">
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </section>
+
+</body>
+
+</html>

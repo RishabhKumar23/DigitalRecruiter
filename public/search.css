@@ -1,0 +1,199 @@
+/* Sticky Nav */
+/* #nav {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+} */
+
+body {
+    background-color: #ECF2FF;
+}
+
+.nav {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D9D9D9;
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    width: 304px;
+    height: 72px;
+}
+
+.nav-item {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    background: #CC8FD7;
+    border-radius: 50%;
+}
+
+
+/* ---------------------------------------------------------Form Section --------------------------------------------------------------------- */
+.outer-form-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 5% 0;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.5rem;
+
+}
+
+.form-div button {
+    border-radius: 10px;
+    background: #631B70;
+    width: 326px;
+    height: 80px;
+    flex-shrink: 0;
+
+    color: #FFF;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.form-div>button>img {
+    margin-left: 3.5rem;
+}
+
+
+input[type="text"] {
+    width: 646px;
+    height: 100px;
+    border-radius: 10px;
+    background: #A359AF;
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+}
+
+input[type="text"]::placeholder {
+    color: #000;
+    text-align: center;
+}
+
+/* --------------------------------------------------- Table Section ------------------------------------------ */
+
+table {
+    background: #CC8FD7;
+    width: 945px;
+    height: 300px;
+    text-align: center;
+}
+
+th,
+td,
+tr {
+    border: 1px solid black;
+}
+
+th {
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: italic;
+    line-height: normal;
+}
+
+td {
+    color: #000;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+}
+
+td button {
+    border-radius: 15px;
+    background: #000;
+    width: 190px;
+    height: 45px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.table-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------------------------Footer-------------------------------------------- */
+footer {
+    background: #A359AF;
+    margin-top: 50px;
+    color: #050606;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+
+}
+
+.footer-inner-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./search.css">
+  <title>Search Page</title>
+</head>
+
+<body>
+  <section id="nav">
+    <div class="nav">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+        <div class="logo-name">Digital Recruiter</div>
+        <a class="nav-item" href="/">HOME</a>
+        <a class="nav-item" href="/about">ABOUT</a>
+      </div>
+      <div class="user">
+        <img src="/vector1.svg" class="" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="input-section">
+    <div class="outer-form-div">
+      <form action="" id="searchForm">
+        <div class="form-div">
+          <input type="text" placeholder="Job Role" name="role" id="role">
+          <input type="text" placeholder="Location" name="location" id="location">
+          <button style="cursor: pointer;" type="submit">Search <img src="/search.svg" alt=""></button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="table">
+    <div class="table-div">
+      <table>
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Location</th>
+          <th>---</th>
+        </tr>
+        </thead>
+        <tbody id="searchTableBody">
+          <tr>
+            <td>
+              rishabh
+            </td>
+            <td>
+              software engineer
+            </td>
+            <td>
+              bangalore
+            </td>
+            <td>
+              <button style="cursor: pointer;">View</button>
+            </td>
+          </tr>
+        </tbody>
+        
+
+      </table>
+    </div>
+  </section>
+  <footer>
+    <div class="footer">
+      <div class="footer-inner-div">
+        <img src="/vector2.svg" alt="">
+        <img src="/vector3.svg" alt="">
+        <img src="/vector4.svg" alt="">
+      </div>
+      <div>
+        <p>rishabh.kumar10101@icloud.com</p>
+        <p>+91 9875704712</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    
+const jsonData = [
+    {
+      "Name": "John Doe",
+      "Role": "Software Engineer",
+      "Location": "San Francisco"
+    },
+    {
+      "Name": "Rishabh Per",
+      "Role": "Software Engineer",
+      "Location": "India"
+    },
+    {
+      "Name": "Jane Smith",
+      "Role": "Product Manager",
+      "Location": "New York"
+    },
+    {
+      "Name": "Michael Johnson",
+      "Role": "Data Scientist",
+      "Location": "Chicago"
+    },
+    {
+      "Name": "Emily Brown",
+      "Role": "Graphic Designer",
+      "Location": "Los Angeles"
+    },
+    {
+      "Name": "David Wilson",
+      "Role": "Sales Executive",
+      "Location": "London"
+    }
+  ];
+
+// Function to search through the JSON data
+function searchData(jsonData, role, location) {
+  const results = jsonData.filter(item => {
+    // Case-insensitive search by converting both the field value and searchTerm to lowercase
+    const roleValue = item.Role.toLowerCase();
+    const locationValue = item.Location.toLowerCase();
+
+    // Check if the role and location match the search values
+    const roleMatch = roleValue.includes(role.toLowerCase());
+    const locationMatch = locationValue.includes(location.toLowerCase());
+
+    // Return true if both role and location match
+    return roleMatch && locationMatch;
+  });
+
+  
+    return results;
+  }
+// Render the search results in the table
+function renderTable(results) {
+  const tableBody = document.getElementById("searchTableBody");
+
+  // Clear any existing table rows
+  tableBody.innerHTML = "";
+
+  // Create a table row for each result
+  results.forEach(result => {
+    const row = document.createElement("tr");
+    const nameCell = document.createElement("td");
+    const roleCell = document.createElement("td");
+    const locationCell = document.createElement("td");
+    const view = document.createElement("td");
+
+    // Set the cell values
+    nameCell.textContent = result.Name;
+    roleCell.textContent = result.Role;
+    locationCell.textContent = result.Location;
+    view.innerHTML = "<button style='cursor: pointer;'>View</button>";
+    // Append the cells to the row
+    row.appendChild(nameCell);
+    row.appendChild(roleCell);
+    row.appendChild(locationCell);
+    row.appendChild(view);
+    // Append the row to the table body
+    tableBody.appendChild(row);
+  });
+}
+
+// Handle form submission
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent page refresh on form submission
+
+  const role = document.getElementById("role").value;
+  const location = document.getElementById("location").value;
+
+  // Search for the entered role and location
+  const searchResults = searchData(jsonData, role,location);
+
+  // Render the search results in the table
+  renderTable(searchResults);
+});
+  </script>
+
+</body>
+
+</html>
